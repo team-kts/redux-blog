@@ -9,9 +9,9 @@ export default function Posts({ posts }) {
 
   return (
     <>
-      <ul>
+      <ol>
         {listOfPosts}
-      </ul>
+      </ol>
     </>
   );
 }

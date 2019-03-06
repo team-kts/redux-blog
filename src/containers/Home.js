@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Home from '../components/home/Home';
 import { fetchPosts } from '../actions/blog';
-import { getPosts } from '../selectors/blog';
+import { getLongestPosts } from '../selectors/blog';
 
 class HomeContainer extends PureComponent {
 	static propTypes = {
@@ -23,7 +23,7 @@ class HomeContainer extends PureComponent {
 }
 
 const mapToStateProps = state => ({
-  posts: getPosts(state)
+  posts: getLongestPosts(state)
 });
 
 const mapDispatchToProps = dispatch => ({

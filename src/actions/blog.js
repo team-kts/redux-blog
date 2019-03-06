@@ -15,15 +15,21 @@ export const LOAD_COMMENTS_END = 'LOAD_COMMENTS_END';
 
 export const fetchPosts = () => ({
   type: FETCH_POSTS,
-  payload: getPosts()
+  loadStart: LOAD_POSTS_START,
+  payload: getPosts(),
+  loadEnd: LOAD_POSTS_END
 });
 
 export const fetchComments = (postId) => ({
   type: FETCH_COMMENTS,
-  payload: getComments(postId)
+  loadStart: LOAD_COMMENTS_START,
+  payload: getComments(postId),
+  loadEnd: LOAD_COMMENTS_END
 });
 
 export const fetchUsers = () => ({
   type: FETCH_USERS,
-  payload: getUsers()
+  loadStart: LOAD_USERS_START,
+  payload: getUsers(),
+  loadEnd: LOAD_COMMENTS_END
 });

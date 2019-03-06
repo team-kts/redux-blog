@@ -1,4 +1,4 @@
-import { getPosts, getComments, getUsers } from '../services/placeholderApi';
+import { getPosts, getComments, getUsers } from '../services/blogService';
 
 export const UPDATE_POST_SEARCH_TERM = 'UPDATE_POST_SEARCH_TERM';
 export const FETCH_POSTS = 'FETCH_POSTS';

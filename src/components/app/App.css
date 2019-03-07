@@ -5,5 +5,11 @@
   .link {
     padding: 10px;
     text-decoration: none;
+    color: black;
+  }
+  .headerLink {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
   }
 }

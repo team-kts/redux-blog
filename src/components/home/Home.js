@@ -5,7 +5,7 @@ import FivePosts from '../posts/FivePosts';
 export default function Home({ posts }) {
   return (
     <>
-      <h2>POSTS</h2>
+      <h2>FEATURED POSTS</h2>
       <FivePosts posts={posts} />
     </>
   );

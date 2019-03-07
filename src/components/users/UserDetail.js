@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function UserDetail({ user }) {
+export default function UserDetail({ user, posts }) {
   return (
     <>
       <h2>{user.name}</h2>
       <p>{user.email}</p>
-      <p>POSTS</p>
+      <p>{posts}</p>
     </>
   );
 }
 
 UserDetail.propTypes = {
-  user: PropTypes.object
+  user: PropTypes.object,
+  posts: PropTypes.array
 };

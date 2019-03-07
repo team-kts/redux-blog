@@ -22,3 +22,10 @@ export const fetchPostById = (id) => ({
   payload: getPostById(id),
   loadEnd: LOAD_POST_END
 });
+
+export const fetchPostByUserId = (userId) => ({
+  type: FETCH_POSTS_BY_USER,
+  loadStart: LOAD_POST_START,
+  payload: getPostById(userId),
+  loadEnd: LOAD_POST_END
+});

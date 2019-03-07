@@ -5,6 +5,7 @@ import FilterPosts from '../../containers/FilterPosts';
 import PostDetailContainer from '../../containers/PostDetailContainer';
 import UsersContainer from '../../containers/UsersContainer';
 import UserDetailContainer from '../../containers/UserDetailContainer';
+import './App.css';
 
 export default function Header() {
   return (

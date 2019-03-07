@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment matches a snapshot 1`] = `
+Array [
+  <p>
+    comment
+  </p>,
+  <p>
+    Email: 
+    email@email.com
+  </p>,
+]
+`;

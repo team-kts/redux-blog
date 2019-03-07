@@ -1,9 +1,10 @@
-import { FETCH_COMMENTS, FETCH_POSTS, FETCH_USERS } from '../actions/blog';
+import { FETCH_COMMENTS, FETCH_POSTS, FETCH_USERS, FETCH_POST } from '../actions/blog';
 
 const initialState = {
   posts: [],
   users: [],
-  comments: []
+  comments: [],
+  post: {}
 };
 
 export default function reducer(state = initialState, action) {
@@ -24,6 +25,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         users: action.payload
+      };
+
+    case FETCH_POST: 
+      return {
+        ...state,
+        post: action.payload
       };
 
     default:

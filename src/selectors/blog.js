@@ -4,3 +4,5 @@ export const getLongestPosts = state => {
     return a.body.length - b.body.length;
   }).slice(0, 5);
 };
+
+export const getPostById = state => state.blog.post;

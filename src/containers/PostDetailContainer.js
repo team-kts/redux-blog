@@ -3,13 +3,14 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import PostDetail from '../components/posts/PostDetail';
-import { fetchPosts } from '../actions/blog';
-import { getPosts } from '../selectors/blog';
+import { fetchPostById } from '../actions/blog';
+import { getPostById } from '../selectors/blog';
 
 class PostDetailContainer extends PureComponent {
 	static propTypes = {
-	  posts: PropTypes.array.isRequired,
-	  fetch: PropTypes.func.isRequired
+	  post: PropTypes.object,
+	  fetch: PropTypes.func,
+	  match: PropTypes.object
 	};
 
 	componentDidMount() {
@@ -23,12 +24,12 @@ class PostDetailContainer extends PureComponent {
 }
 
 const mapToStateProps = state => ({
-  posts: getPosts(state)
+  post: getPostById(state)
 });
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    return dispatch(fetchPosts());
+    return dispatch(fetchPostById(this.match.params.id));
   }
 });
 

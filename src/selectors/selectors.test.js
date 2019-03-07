@@ -1,4 +1,4 @@
-import { getPosts, getUsers, getPostById, getComments } from './blog';
+import { getPosts, getUsers, getPostById, getComments, getUserById } from './blog';
 
 describe('selectors test', () => {
   it('can get posts', () => {
@@ -140,5 +140,52 @@ describe('selectors test', () => {
         'body': 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et'
       }
     ]);
+  });
+
+  it('can get a user by id', () => {
+    const state = {
+      users: {
+        users: [],
+        user: {
+          'id': 1,
+          'name': 'Leanne Graham',
+          'username': 'Bret',
+          'email': 'Sincere@april.biz',
+          'address': {
+            'street': 'Kulas Light',
+            'suite': 'Apt. 556',
+            'city': 'Gwenborough',
+            'zipcode': '92998-3874',
+            'geo': {
+              'lat': '-37.3159',
+              'lng': '81.1496'
+            }
+          }
+        }
+      },
+      comments: [],
+      posts: {}
+    };
+
+    const fetchedUser = getUserById(state);
+      
+    expect(fetchedUser).toEqual(
+      {
+        'id': 1,
+        'name': 'Leanne Graham',
+        'username': 'Bret',
+        'email': 'Sincere@april.biz',
+        'address': {
+          'street': 'Kulas Light',
+          'suite': 'Apt. 556',
+          'city': 'Gwenborough',
+          'zipcode': '92998-3874',
+          'geo': {
+            'lat': '-37.3159',
+            'lng': '81.1496'
+          }
+        }
+      }
+    );
   });
 });

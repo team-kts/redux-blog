@@ -13,7 +13,9 @@ export default function UserDetail({ user, posts }) {
   return (
     <>
       <h2>{user.name}</h2>
-      <p>{user.email}</p>
+      <p>Email: {user.email}</p>
+      <p>Username: {user.username}</p>
+      <h2>Posts</h2>
       <ul>{listOfPosts}</ul>
     </>
   );

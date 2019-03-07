@@ -6,7 +6,7 @@ export default function PostDetail({ post, comments, user }) {
   return (
     <>
       <h2>{post.title}</h2>
-      <h4>{user.name}</h4>
+      <h4>By: {user.name}</h4>
       <p>{post.body}</p>
       <h4>Comments</h4>
       <Comments comments={comments}/>

@@ -6,8 +6,6 @@ export default function User({ user }) {
   return (
     <>
       <Link to={`/users/${user.id}`} key={user.id}><h2>{user.name}</h2></Link>
-      <p>{user.username}</p>
-      <p>{user.email}</p>
     </>
   );
 }

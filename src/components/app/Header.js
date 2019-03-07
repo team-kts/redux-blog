@@ -9,7 +9,7 @@ import UserDetailContainer from '../../containers/UserDetailContainer';
 export default function Header() {
   return (
     <>
-      <h1> NavBar </h1>
+      <h1>BLOG</h1>
       <Router>
         <div>
           <Link to='/'>Home</Link>

@@ -14,9 +14,9 @@ export default function Posts({ posts, onChange, term }) {
   return (
     <>
       <input type="text" name="term" value={term} onChange={onChange}/>
-      <ol>
+      <ul>
         {listOfPosts}
-      </ol>
+      </ul>
     </>
   );
 }

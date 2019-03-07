@@ -1,4 +1,4 @@
-import { getPosts, getUsers, getPostById } from './blog';
+import { getPosts, getUsers, getPostById, getComments } from './blog';
 
 describe('selectors test', () => {
   it('can get posts', () => {
@@ -105,6 +105,39 @@ describe('selectors test', () => {
             'lng': '81.1496'
           }
         }
+      }
+    ]);
+  });
+
+  it('can get comments', () => {
+    const state = {
+      users: {},
+      comments: {
+        comments: [
+          {
+            'postId': 1,
+            'id': 2,
+            'name': 'quo vero reiciendis velit similique earum',
+            'email': 'Jayne_Kuhic@sydney.com',
+            'body': 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et'
+          }
+        ]
+      },
+      posts: {
+        posts: [],
+        post: {}
+      }
+    };
+
+    const fetchedComments = getComments(state);
+      
+    expect(fetchedComments).toEqual([
+      {
+        'postId': 1,
+        'id': 2,
+        'name': 'quo vero reiciendis velit similique earum',
+        'email': 'Jayne_Kuhic@sydney.com',
+        'body': 'est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et'
       }
     ]);
   });

@@ -6,3 +6,4 @@ export const getLongestPosts = state => {
   }).slice(0, 5);
 };
 export const getUsers = state => state.users.users;
+export const getUserById = state => state.users.user;

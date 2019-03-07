@@ -1,7 +1,8 @@
-import { FETCH_USERS } from '../actions/users';
+import { FETCH_USERS, FETCH_USER } from '../actions/users';
 
 const initialState = {
-  users: []
+  users: [],
+  user: {}
 };
 
 export default function reducer(state = initialState, action) {
@@ -10,6 +11,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         users: action.payload
+      };
+      
+    case FETCH_USER: 
+      return {
+        ...state,
+        user: action.payload
       };
 
     default:

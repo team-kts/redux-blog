@@ -4,6 +4,7 @@ import HomeContainer from '../../containers/Home';
 import FilterPosts from '../../containers/FilterPosts';
 import PostDetailContainer from '../../containers/PostDetailContainer';
 import UsersContainer from '../../containers/UsersContainer';
+import UserDetailContainer from '../../containers/UserDetailContainer';
 
 export default function Header() {
   return (
@@ -19,6 +20,7 @@ export default function Header() {
             <Route exact path='/posts' component={FilterPosts}/>
             <Route exact path='/posts/:id' component={PostDetailContainer}/>
             <Route exact path='/users' component={UsersContainer}/>
+            <Route exact path='/users/:id' component={UserDetailContainer}/>
           </Switch>
         </div>
       </Router>

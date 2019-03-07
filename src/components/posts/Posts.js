@@ -24,5 +24,5 @@ export default function Posts({ posts, onChange, term }) {
 Posts.propTypes = {
   posts: PropTypes.array.isRequired,
   term: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func
 };

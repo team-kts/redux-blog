@@ -10,11 +10,11 @@ import { fetchUserById } from '../actions/users';
 
 class PostDetailContainer extends PureComponent {
 	static propTypes = {
-	  post: PropTypes.object,
+	  post: PropTypes.object.isRequired,
 	  comments: PropTypes.array,
-	  fetchPost: PropTypes.func,
-	  fetchComments: PropTypes.func,
-	  match: PropTypes.object
+	  fetchPost: PropTypes.func.isRequired,
+	  fetchComments: PropTypes.func.isRequired,
+	  match: PropTypes.object.isRequired
 	};
 
 	componentDidMount() {

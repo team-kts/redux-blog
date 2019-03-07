@@ -15,7 +15,7 @@ export default function PostDetail({ post, comments, user }) {
 }
 
 PostDetail.propTypes = {
-  post: PropTypes.object,
+  post: PropTypes.object.isRequired,
   comments: PropTypes.array,
-  user: PropTypes.object
+  user: PropTypes.object.isRequired
 };

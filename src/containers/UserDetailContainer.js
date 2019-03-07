@@ -9,11 +9,11 @@ import { getUserById, getPosts } from '../selectors/blog';
 
 class UserDetailContainer extends PureComponent {
 	static propTypes = {
-	  user: PropTypes.object,
-	  posts: PropTypes.array,
-	  fetchUser: PropTypes.func,
-	  fetchPosts: PropTypes.func,
-	  match: PropTypes.object
+	  user: PropTypes.object.isRequired,
+	  posts: PropTypes.array.isRequired,
+	  fetchUser: PropTypes.func.isRequired,
+	  fetchPosts: PropTypes.func.isRequired,
+	  match: PropTypes.object.isRequired
 	};
 
 	componentDidMount() {

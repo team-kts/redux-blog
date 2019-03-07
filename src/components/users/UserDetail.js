@@ -22,6 +22,6 @@ export default function UserDetail({ user, posts }) {
 }
 
 UserDetail.propTypes = {
-  user: PropTypes.object,
-  posts: PropTypes.array
+  user: PropTypes.object.isRequired,
+  posts: PropTypes.array.isRequired
 };

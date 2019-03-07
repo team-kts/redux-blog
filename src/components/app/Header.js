@@ -30,7 +30,7 @@ function Header(props) {
   const { classes } = props;
   return (
     <>
-      <h1>BLOG</h1>
+      <h1 className={styles1.title}>BLOG</h1>
       <Router>
         <div>
           <div className={classes.root}>

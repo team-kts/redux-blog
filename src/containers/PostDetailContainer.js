@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import PostDetail from '../components/posts/PostDetail';
 import { fetchPostById } from '../actions/posts';
 import { fetchComments } from '../actions/comments';
-import { getPostById, getComments } from '../selectors/blog';
+import { getPostById, getComments, getUserById } from '../selectors/blog';
+import { fetchUserById } from '../actions/users';
 
 class PostDetailContainer extends PureComponent {
 	static propTypes = {
@@ -29,12 +30,17 @@ class PostDetailContainer extends PureComponent {
 
 const mapToStateProps = state => ({
   post: getPostById(state),
-  comments: getComments(state)
+  comments: getComments(state),
+  user: getUserById(state)
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchPost() {
-    return dispatch(fetchPostById(this.match.params.id));
+    const action = fetchPostById(this.match.params.id);
+    dispatch(action);
+    action.payload.then(post => {
+      dispatch(fetchUserById(post.userId));
+    });
   },
   fetchComments() {
     return dispatch(fetchComments(this.match.params.id));

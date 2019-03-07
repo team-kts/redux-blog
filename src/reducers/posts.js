@@ -1,8 +1,9 @@
-import { FETCH_POSTS, FETCH_POST, FETCH_POSTS_BY_USER } from '../actions/posts';
+import { FETCH_POSTS, FETCH_POST, FETCH_POSTS_BY_USER, UPDATE_SEARCH_TERM } from '../actions/posts';
 
 const initialState = {
   posts: [],
-  post: {}
+  post: {},
+  term: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -23,6 +24,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         post: action.payload
+      };
+    
+    case UPDATE_SEARCH_TERM:
+      return {
+        ...state,
+        term: action.payload
       };
 
     default:

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export default function Comment({ comment }) {
   return (
     <>
-      <h2>{comment.name}</h2>
       <p>{comment.body}</p>
+      <p>Email: {comment.email}</p>
     </>
   );
 }

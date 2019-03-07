@@ -7,6 +7,7 @@ export default function PostDetail({ post, comments }) {
     <>
       <h2>{post.title}</h2>
       <p>{post.body}</p>
+      <h4>Comments</h4>
       <Comments comments={comments}/>
     </>
   );

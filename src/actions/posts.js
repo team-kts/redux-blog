@@ -13,6 +13,10 @@ export const FETCH_POSTS_BY_USER = 'FETCH_POSTS_BY_USER';
 export const LOAD_POSTS_BY_USER_START = 'LOAD_POSTS_BY_USER_START';
 export const LOAD_POSTS_BY_USER_END = 'LOAD_POSTS_BY_USER_END';
 
+export const UPDATE_SEARCH_TERM = 'UPDATE_SEARCH_TERM';
+export const LOAD_TERM_START = 'LOAD_TERM_START';
+export const LOAD_TERM_END = 'LOAD_TERM_END';
+
 export const fetchPosts = () => ({
   type: FETCH_POSTS,
   loadStart: LOAD_POSTS_START,
@@ -32,4 +36,9 @@ export const fetchPostsByUserId = (userId) => ({
   loadStart: LOAD_POSTS_BY_USER_START,
   payload: getPostByUserId(userId),
   loadEnd: LOAD_POSTS_BY_USER_END
+});
+
+export const updateSearchTerm = term => ({
+  type: UPDATE_SEARCH_TERM,
+  payload: term
 });

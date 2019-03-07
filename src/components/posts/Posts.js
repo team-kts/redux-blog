@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
 
-export default function Posts({ posts }) {
+export default function Posts({ posts, onChange, term }) {
   const listOfPosts = posts.map((post) => {
     return (
       <li key={post.id}>
@@ -13,6 +13,7 @@ export default function Posts({ posts }) {
 
   return (
     <>
+      <input type="text" name="term" value={term} onChange={onChange}/>
       <ol>
         {listOfPosts}
       </ol>
@@ -21,5 +22,7 @@ export default function Posts({ posts }) {
 }
 
 Posts.propTypes = {
-  posts: PropTypes.array
+  posts: PropTypes.array.isRequired,
+  term: PropTypes.string,
+  onChange: PropTypes.func.isRequired
 };

@@ -3,19 +3,22 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Posts from '../components/posts/Posts';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/posts';
-import { getPosts } from '../selectors/blog';
+import { fetchPosts, updateSearchTerm } from '../actions/posts';
+import { getFilteredPosts } from '../selectors/blog';
 
 class FilterPosts extends PureComponent {
 	static propTypes = {
 	  posts: PropTypes.array.isRequired,
-	  fetch: PropTypes.func.isRequired
+	  fetch: PropTypes.func.isRequired,
+	  onChange: PropTypes.func.isRequired,
+	  term: PropTypes.string
 	};
 
 	componentDidMount() {
 	  console.log('posts array', this.props.posts);
 	  this.props.fetch();
 	}
+
 	render() {
 	  return (
 	    <Posts {...this.props} />
@@ -24,12 +27,15 @@ class FilterPosts extends PureComponent {
 }
 
 const mapToStateProps = state => ({
-  posts: getPosts(state)
+  posts: getFilteredPosts(state)
 });
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
     return dispatch(fetchPosts());
+  },
+  onChange({ target }) {
+    return dispatch(updateSearchTerm(target.value));
   }
 });
 

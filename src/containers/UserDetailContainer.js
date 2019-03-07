@@ -11,14 +11,14 @@ class UserDetailContainer extends PureComponent {
 	static propTypes = {
 	  user: PropTypes.object,
 	  posts: PropTypes.array,
-	  fetch: PropTypes.func,
-	  fetch1: PropTypes.func,
+	  fetchUser: PropTypes.func,
+	  fetchPosts: PropTypes.func,
 	  match: PropTypes.object
 	};
 
 	componentDidMount() {
-	  this.props.fetch();
-	  this.props.fetch1();
+	  this.props.fetchUser();
+	  this.props.fetchPosts();
 	}
 	render() {
 	  return (
@@ -33,10 +33,10 @@ const mapToStateProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch() {
+  fetchUser() {
     return dispatch(fetchUserById(this.match.params.id));
   },
-  fetch1() {
+  fetchPosts() {
     return dispatch(fetchPostsByUserId(this.match.params.id));
   }
 });

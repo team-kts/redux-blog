@@ -5,4 +5,6 @@ export const getLongestPosts = state => {
   }).slice(0, 5);
 };
 
+export const getUsers = state => state.blog.users;
+
 export const getPostById = state => state.blog.post;

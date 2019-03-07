@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Posts from '../posts/Posts';
+import FivePosts from '../posts/FivePosts';
 
 export default function Home({ posts }) {
   return (
     <>
       <h2>POSTS</h2>
-      <Posts posts={posts} />
+      <FivePosts posts={posts} />
     </>
   );
 }

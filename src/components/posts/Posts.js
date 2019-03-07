@@ -1,8 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
+import Input from '@material-ui/core/Input';
+import { withStyles } from '@material-ui/core/styles';
 
-export default function Posts({ posts, onChange, term }) {
+const styles = theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  input: {
+    margin: theme.spacing.unit,
+  },
+});
+
+function Posts({ posts, onChange, term }) {
   const listOfPosts = posts.map((post, i) => {
     return (
       <li key={i}>
@@ -13,7 +25,12 @@ export default function Posts({ posts, onChange, term }) {
 
   return (
     <>
-      <input type="text" name="term" value={term} onChange={onChange}/>
+      <Input type="text" name="term" value={term} onChange={onChange}
+        defaultValue="Search"
+        inputProps={{
+          'aria-label': 'Description',
+        }}
+      />
       <ul>
         {listOfPosts}
       </ul>
@@ -26,3 +43,5 @@ Posts.propTypes = {
   term: PropTypes.string,
   onChange: PropTypes.func
 };
+
+export default withStyles(styles)(Posts);

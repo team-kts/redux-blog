@@ -15,7 +15,6 @@ class FilterPosts extends PureComponent {
 	};
 
 	componentDidMount() {
-	  console.log('posts array', this.props.posts);
 	  this.props.fetch();
 	}
 

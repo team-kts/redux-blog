@@ -1,39 +1,111 @@
-import { getPosts } from './blog';
-
-// jest.mock('../../services/blogService.js');
+import { getPosts, getUsers, getPostById } from './blog';
 
 describe('selectors test', () => {
   it('can get posts', () => {
     const state = {
       users: [],
       comments: [],
-      post: {},
-      posts: [
-        {
-          'userId': 1,
-          'id': 1,
-          'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
-          'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
-        },
-        {
-          'userId': 1,
-          'id': 2,
-          'title': 'qui est esse',
-          'body': 'est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla'
-        },
-        {
-          'userId': 1,
-          'id': 3,
-          'title': 'ea molestias quasi exercitationem repellat qui ipsa sit aut',
-          'body': 'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut'
-        }
-      ]
+      posts: {
+        posts: [
+          {
+            'userId': 1,
+            'id': 1,
+            'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+            'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+          }
+        ],
+        post: {}
+      }
     };
 
-    getPosts(state)
-      .then(res => {
-        expect(res).toEqual('');
+    const fetchedPosts = getPosts(state);
+      
+    expect(fetchedPosts).toEqual([
+      {
+        'userId': 1,
+        'id': 1,
+        'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+        'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+      }
+    ]);
+  });
 
-      });
+  it('can get a post by id', () => {
+    const state = {
+      users: [],
+      comments: [],
+      posts: {
+        posts: [
+          {
+            'userId': 1,
+            'id': 1,
+            'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+            'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+          }
+        ],
+        post: {
+          'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+          'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+        }
+      }
+    };
+
+    const fetchedPost = getPostById(state);
+      
+    expect(fetchedPost).toEqual(
+      {
+        'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+        'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+      }
+    );
+  });
+
+  it('can get users', () => {
+    const state = {
+      users: {
+        users: [{
+          'id': 1,
+          'name': 'Leanne Graham',
+          'username': 'Bret',
+          'email': 'Sincere@april.biz',
+          'address': {
+            'street': 'Kulas Light',
+            'suite': 'Apt. 556',
+            'city': 'Gwenborough',
+            'zipcode': '92998-3874',
+            'geo': {
+              'lat': '-37.3159',
+              'lng': '81.1496'
+            }
+          }
+        }]
+      },
+      comments: [],
+      posts: {
+        posts: [],
+        post: {}
+      }
+    };
+
+    const fetchedUsers = getUsers(state);
+      
+    expect(fetchedUsers).toEqual([
+      {
+        'id': 1,
+        'name': 'Leanne Graham',
+        'username': 'Bret',
+        'email': 'Sincere@april.biz',
+        'address': {
+          'street': 'Kulas Light',
+          'suite': 'Apt. 556',
+          'city': 'Gwenborough',
+          'zipcode': '92998-3874',
+          'geo': {
+            'lat': '-37.3159',
+            'lng': '81.1496'
+          }
+        }
+      }
+    ]);
   });
 });

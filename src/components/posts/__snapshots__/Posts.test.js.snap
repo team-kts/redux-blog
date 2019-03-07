@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts matches a snapshot 1`] = `
+Array [
+  <input
+    name="term"
+    onChange={[MockFunction]}
+    type="text"
+  />,
+  <ol>
+    <li>
+      <a
+        href="/posts/undefined"
+        onClick={[Function]}
+      >
+        <h2>
+          title
+        </h2>
+      </a>
+      <p>
+        body
+      </p>
+    </li>
+  </ol>,
+]
+`;

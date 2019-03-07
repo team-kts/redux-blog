@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Post from './Post';
 
 export default function Posts({ posts, onChange, term }) {
-  const listOfPosts = posts.map((post) => {
+  const listOfPosts = posts.map((post, i) => {
     return (
-      <li key={post.id}>
+      <li key={i}>
         <Post post={post} />
       </li>
     );

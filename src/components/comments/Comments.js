@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 export default function Comments({ comments }) {
-  const listOfComments = comments.map((comment) => {
+  const listOfComments = comments.map((comment, i) => {
     return (
-      <li key={comment.id}>
+      <li key={i}>
         <Comment comment={comment}/>
       </li>
     );

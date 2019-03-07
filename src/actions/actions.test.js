@@ -1,5 +1,5 @@
 import { FETCH_POSTS, fetchPosts } from './posts';
-import { getPosts } from '../selectors/blog';
+import { getPosts } from '../services/blogService';
 
 jest.mock('../services/blogService');
 

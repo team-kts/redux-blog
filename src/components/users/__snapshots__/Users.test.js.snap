@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts matches a snapshot 1`] = `
+<ol>
+  <li>
+    <a
+      href="/users/undefined"
+      onClick={[Function]}
+    >
+      <h2>
+        name
+      </h2>
+    </a>
+    <p>
+      username
+    </p>
+    <p>
+      email@email
+    </p>
+  </li>
+</ol>
+`;

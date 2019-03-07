@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Post from '../posts/Post';
 
 export default function UserDetail({ user, posts }) {
-  const listOfPosts = posts.map((post) => {
+  const listOfPosts = posts.map((post, i) => {
     return (
-      <li key={post.id}>
+      <li key={i}>
         <Post post={post} />
       </li>
     );

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import User from './User';
 
 export default function Users({ users }) {
-  const listOfUsers = users.map((user) => {
+  const listOfUsers = users.map((user, i) => {
     return (
-      <li key={user.id}>
+      <li key={i}>
         <User user={user} />
       </li>
     );

@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import PostDetail from '../components/posts/PostDetail';
-import { fetchPostById } from '../actions/blog';
+import { fetchPostById } from '../actions/posts';
 import { getPostById } from '../selectors/blog';
 
 class PostDetailContainer extends PureComponent {

@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Users from '../components/users/Users';
-import { fetchUsers } from '../actions/blog';
+import { fetchUsers } from '../actions/users';
 import { getUsers } from '../selectors/blog';
 
 class UsersContainer extends PureComponent {

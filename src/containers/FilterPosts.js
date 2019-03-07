@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Posts from '../components/posts/Posts';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/blog';
+import { fetchPosts } from '../actions/posts';
 import { getPosts } from '../selectors/blog';
 
 class FilterPosts extends PureComponent {

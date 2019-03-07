@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Home from '../components/home/Home';
-import { fetchPosts } from '../actions/blog';
+import { fetchPosts } from '../actions/posts';
 import { getLongestPosts } from '../selectors/blog';
 
 class HomeContainer extends PureComponent {

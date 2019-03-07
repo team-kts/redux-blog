@@ -1,4 +1,4 @@
-import { getPosts, getUsers } from './blog';
+import { getPosts, getUsers, getPostById } from './blog';
 
 describe('selectors test', () => {
   it('can get posts', () => {
@@ -28,6 +28,36 @@ describe('selectors test', () => {
         'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
       }
     ]);
+  });
+
+  it('can get a post by id', () => {
+    const state = {
+      users: [],
+      comments: [],
+      posts: {
+        posts: [
+          {
+            'userId': 1,
+            'id': 1,
+            'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+            'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+          }
+        ],
+        post: {
+          'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+          'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+        }
+      }
+    };
+
+    const fetchedPost = getPostById(state);
+      
+    expect(fetchedPost).toEqual(
+      {
+        'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+        'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+      }
+    );
   });
 
   it('can get users', () => {

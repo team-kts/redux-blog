@@ -7,3 +7,4 @@ export const getLongestPosts = state => {
 };
 export const getUsers = state => state.users.users;
 export const getUserById = state => state.users.user;
+export const getComments = state => state.comments.comments;

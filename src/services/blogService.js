@@ -13,8 +13,8 @@ export const getPostByUserId = (id) => {
     .then(res => res.json());
 };
 
-export const getComments = (postId) => {
-  return fetch(`https://jsonplaceholder.typicode.com/comments/${postId}`)
+export const getComments = (id) => {
+  return fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
     .then(res => res.json());
 };
 

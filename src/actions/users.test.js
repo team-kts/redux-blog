@@ -4,7 +4,7 @@ import { getUsers } from '../services/blogService';
 jest.mock('../services/blogService');
 
 describe('actions test', () => {
-  it('fetches posts', () => {
+  it('fetches users', () => {
     const action = fetchUsers();
 
     expect(action).toEqual({ 

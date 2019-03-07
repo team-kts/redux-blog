@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import UserDetail from '../components/users/UserDetail';
 import { fetchUserById } from '../actions/users';
-import { fetchPostById } from '../actions/posts';
-import { getUserById, getPostsForUser } from '../selectors/blog';
+import { fetchPostsByUserId } from '../actions/posts';
+import { getUserById, getPosts } from '../selectors/blog';
 
 class UserDetailContainer extends PureComponent {
 	static propTypes = {
@@ -18,6 +18,7 @@ class UserDetailContainer extends PureComponent {
 
 	componentDidMount() {
 	  this.props.fetch();
+	  this.props.fetch1();
 	}
 	render() {
 	  return (
@@ -26,9 +27,9 @@ class UserDetailContainer extends PureComponent {
 	}
 }
 
-const mapToStateProps = (state, props) => ({
+const mapToStateProps = (state) => ({
   user: getUserById(state),
-  posts: getPostsForUser(state, props.match.params.userId)
+  posts: getPosts(state)
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -36,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
     return dispatch(fetchUserById(this.match.params.id));
   },
   fetch1() {
-    return dispatch(fetchPostById(this.props.user.userId));
+    return dispatch(fetchPostsByUserId(this.match.params.id));
   }
 });
 

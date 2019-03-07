@@ -1,4 +1,4 @@
-import { FETCH_POSTS, FETCH_POST } from '../actions/posts';
+import { FETCH_POSTS, FETCH_POST, FETCH_POSTS_BY_USER } from '../actions/posts';
 
 const initialState = {
   posts: [],
@@ -8,6 +8,12 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case FETCH_POSTS:
+      return {
+        ...state,
+        posts: action.payload
+      };
+
+    case FETCH_POSTS_BY_USER:
       return {
         ...state,
         posts: action.payload

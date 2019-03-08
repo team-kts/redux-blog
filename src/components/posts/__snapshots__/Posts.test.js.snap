@@ -1,22 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Posts matches a snapshot 1`] = `
-Array [
+<div
+  className="postsContainer"
+>
+  <h2
+    className="postsTitle"
+  >
+    Posts
+  </h2>
   <div
-    className="MuiInputBase-root-16 MuiInput-root-3 MuiInput-underline-7"
+    className="MuiInputBase-root-16 MuiInput-root-3 MuiInput-underline-7 search"
     onClick={[Function]}
   >
     <input
       aria-label="Description"
       className="MuiInputBase-input-26 MuiInput-input-11"
-      defaultValue="Search"
       name="term"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      placeholder="Search"
       type="text"
     />
-  </div>,
+  </div>
   <ul>
     <li>
       <a
@@ -28,10 +35,12 @@ Array [
           title
         </h3>
       </a>
-      <p>
+      <p
+        className="postBody"
+      >
         body
       </p>
     </li>
-  </ul>,
-]
+  </ul>
+</div>
 `;

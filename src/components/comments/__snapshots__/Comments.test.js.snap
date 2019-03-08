@@ -5,13 +5,17 @@ exports[`Comments matches a snapshot 1`] = `
   className="body"
 >
   <li>
-    <p>
-      comment
-    </p>
-    <p>
-      Email: 
-      email@email.com
-    </p>
+    <div
+      className="comment"
+    >
+      <p>
+        comment
+      </p>
+      <p>
+        Email: 
+        email@email.com
+      </p>
+    </div>
   </li>
 </ul>
 `;

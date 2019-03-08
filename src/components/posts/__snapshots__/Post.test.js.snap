@@ -11,7 +11,9 @@ Array [
       title
     </h3>
   </a>,
-  <p>
+  <p
+    className="postBody"
+  >
     body
   </p>,
 ]

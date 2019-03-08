@@ -2,17 +2,21 @@
 
 exports[`UserDetail matches a snapshot 1`] = `
 Array [
-  <h2>
-    name
-  </h2>,
-  <p>
-    Email: 
-    email@email
-  </p>,
-  <p>
-    Username: 
-    username
-  </p>,
+  <div
+    className="userDetail"
+  >
+    <h2>
+      name
+    </h2>
+    <p>
+      Email: 
+      email@email
+    </p>
+    <p>
+      Username: 
+      username
+    </p>
+  </div>,
   <h2>
     Posts
   </h2>,
@@ -27,7 +31,9 @@ Array [
           title1
         </h3>
       </a>
-      <p>
+      <p
+        className="postBody"
+      >
         body1
       </p>
     </li>
@@ -41,7 +47,9 @@ Array [
           title2
         </h3>
       </a>
-      <p>
+      <p
+        className="postBody"
+      >
         body2
       </p>
     </li>

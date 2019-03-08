@@ -2,7 +2,9 @@
 
 exports[`Post matches a snapshot 1`] = `
 Array [
-  <h2>
+  <h2
+    className="postTitle"
+  >
     title
   </h2>,
   <h4>
@@ -10,7 +12,7 @@ Array [
     name
   </h4>,
   <p
-    className="body"
+    className="postBody"
   >
     body
   </p>,
@@ -21,20 +23,28 @@ Array [
     className="body"
   >
     <li>
-      <p>
-        body1
-      </p>
-      <p>
-        Email: 
-      </p>
+      <div
+        className="comment"
+      >
+        <p>
+          body1
+        </p>
+        <p>
+          Email: 
+        </p>
+      </div>
     </li>
     <li>
-      <p>
-        body2
-      </p>
-      <p>
-        Email: 
-      </p>
+      <div
+        className="comment"
+      >
+        <p>
+          body2
+        </p>
+        <p>
+          Email: 
+        </p>
+      </div>
     </li>
   </ul>,
 ]

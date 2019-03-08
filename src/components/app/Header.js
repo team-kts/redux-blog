@@ -13,9 +13,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 const styles = {
-  root: {
-    flexGrow: 1
-  },
   grow: {
     flexGrow: 1
   },
@@ -30,10 +27,10 @@ function Header(props) {
   const { classes } = props;
   return (
     <>
-      <h1 className={styles1.title}>BLOG</h1>
+      <h1 className={styles1.title}>Confessions of an Influencer</h1>
       <Router>
         <div>
-          <div className={classes.root}>
+          <div className={styles1.nav}>
             <AppBar position="static">
               <Toolbar>
                 <Link to='/' className={styles1.headerLink}><Typography variant="h6" color="inherit" className={classes.grow}>

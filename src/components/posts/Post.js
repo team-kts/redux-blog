@@ -6,7 +6,7 @@ import styles1 from '../app/App.css';
 export default function Post({ post }) {
   return (
     <>
-      <Link to={`/posts/${post.id}`} key={post.id} className={styles1.link}><h2>{post.title}</h2></Link>
+      <Link to={`/posts/${post.id}`} key={post.id} className={styles1.link}><h3>{post.title}</h3></Link>
       <p>{post.body}</p>
     </>
   );

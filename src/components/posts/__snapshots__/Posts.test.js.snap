@@ -2,25 +2,36 @@
 
 exports[`Posts matches a snapshot 1`] = `
 Array [
-  <input
-    name="term"
-    onChange={[MockFunction]}
-    type="text"
-  />,
-  <ol>
+  <div
+    className="MuiInputBase-root-16 MuiInput-root-3 MuiInput-underline-7"
+    onClick={[Function]}
+  >
+    <input
+      aria-label="Description"
+      className="MuiInputBase-input-26 MuiInput-input-11"
+      defaultValue="Search"
+      name="term"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="text"
+    />
+  </div>,
+  <ul>
     <li>
       <a
+        className="link"
         href="/posts/undefined"
         onClick={[Function]}
       >
-        <h2>
+        <h3>
           title
-        </h2>
+        </h3>
       </a>
       <p>
         body
       </p>
     </li>
-  </ol>,
+  </ul>,
 ]
 `;

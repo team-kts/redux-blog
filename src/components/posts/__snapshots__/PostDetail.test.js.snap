@@ -5,13 +5,21 @@ Array [
   <h2>
     title
   </h2>,
-  <p>
+  <h4>
+    By: 
+    name
+  </h4>,
+  <p
+    className="body"
+  >
     body
   </p>,
   <h4>
     Comments
   </h4>,
-  <ul>
+  <ul
+    className="body"
+  >
     <li>
       <p>
         body1

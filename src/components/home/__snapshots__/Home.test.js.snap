@@ -3,26 +3,23 @@
 exports[`Home matches a snapshot 1`] = `
 Array [
   <h2>
-    POSTS
+    FEATURED POSTS
   </h2>,
-  <input
-    name="term"
-    type="text"
-  />,
-  <ol>
+  <ul>
     <li>
       <a
+        className="link"
         href="/posts/undefined"
         onClick={[Function]}
       >
-        <h2>
+        <h3>
           title
-        </h2>
+        </h3>
       </a>
       <p>
         body
       </p>
     </li>
-  </ol>,
+  </ul>,
 ]
 `;

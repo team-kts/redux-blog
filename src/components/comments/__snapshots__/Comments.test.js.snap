@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Comments matches a snapshot 1`] = `
-<ul>
+<ul
+  className="body"
+>
   <li>
     <p>
       comment

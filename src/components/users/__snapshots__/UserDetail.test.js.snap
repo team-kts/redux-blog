@@ -6,17 +6,26 @@ Array [
     name
   </h2>,
   <p>
+    Email: 
     email@email
   </p>,
+  <p>
+    Username: 
+    username
+  </p>,
+  <h2>
+    Posts
+  </h2>,
   <ul>
     <li>
       <a
+        className="link"
         href="/posts/undefined"
         onClick={[Function]}
       >
-        <h2>
+        <h3>
           title1
-        </h2>
+        </h3>
       </a>
       <p>
         body1
@@ -24,12 +33,13 @@ Array [
     </li>
     <li>
       <a
+        className="link"
         href="/posts/undefined"
         onClick={[Function]}
       >
-        <h2>
+        <h3>
           title2
-        </h2>
+        </h3>
       </a>
       <p>
         body2

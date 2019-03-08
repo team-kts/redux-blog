@@ -21,9 +21,14 @@ describe('Post', () => {
       }
     ];
 
+    const user = {
+      name: 'name',
+      email: 'email'
+    };
+
     const tree = renderer.create(
       <Router>
-        <PostDetail comments={comments} post={post} />
+        <PostDetail comments={comments} post={post} user={user} />
       </Router>
     ).toJSON();
     expect(tree).toMatchSnapshot();

@@ -20,6 +20,7 @@ class UserDetailContainer extends PureComponent {
 	  this.props.fetchUser();
 	  this.props.fetchPosts();
 	}
+	
 	render() {
 	  return (
 	    <UserDetail {...this.props} />

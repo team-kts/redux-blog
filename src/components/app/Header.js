@@ -25,6 +25,7 @@ const styles = {
 
 function Header(props) {
   const { classes } = props;
+  
   return (
     <>
       <h1 className={styles1.title}>Confessions of an Influencer</h1>

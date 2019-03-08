@@ -6,6 +6,7 @@ describe('posts reducer', () => {
       posts: [],
       post: {}
     };
+
     const fetchedPosts = reducer(state, {
       type: 'FETCH_POSTS',
       payload: [
@@ -48,6 +49,7 @@ describe('posts reducer', () => {
       posts: [],
       post: {}
     };
+    
     const fetchedPost = reducer(state, {
       type: 'FETCH_POST',
       payload: 

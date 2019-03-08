@@ -15,6 +15,7 @@ class HomeContainer extends PureComponent {
 	componentDidMount() {
 	  this.props.fetch();
 	}
+	
 	render() {
 	  return (
 	    <Home {...this.props} />

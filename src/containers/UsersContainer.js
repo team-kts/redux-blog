@@ -15,6 +15,7 @@ class UsersContainer extends PureComponent {
 	componentDidMount() {
 	  this.props.fetch();
 	}
+	
 	render() {
 	  return (
 	    <Users {...this.props} />

@@ -10,6 +10,7 @@ describe('Posts', () => {
       body: 'body'
     }];
     const onChange = jest.fn();
+    
     const tree = renderer.create(
       <Router>
         <Posts posts={posts} onChange={onChange}/>

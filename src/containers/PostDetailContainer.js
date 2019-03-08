@@ -21,6 +21,7 @@ class PostDetailContainer extends PureComponent {
 	  this.props.fetchPost();
 	  this.props.fetchComments();
 	}
+	
 	render() {
 	  return (
 	    <PostDetail {...this.props} />

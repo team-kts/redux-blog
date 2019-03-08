@@ -157,6 +157,7 @@ export const getUsers = () => {
       }
     }
   ];
+  
   return Promise.resolve({
     users
   });

@@ -5,6 +5,7 @@ describe('users reducer', () => {
     const state = {
       users: []
     };
+
     const fetchedUsers = reducer(state, {
       type: 'FETCH_USERS',
       payload: [
@@ -65,6 +66,7 @@ describe('users reducer', () => {
     const state = {
       user: {}
     };
+    
     const fetchedUser = reducer(state, {
       type: 'FETCH_USER',
       payload: {

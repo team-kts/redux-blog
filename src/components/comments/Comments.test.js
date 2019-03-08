@@ -8,6 +8,7 @@ describe('Comments', () => {
       body: 'comment',
       email: 'email@email.com'
     }];
+    
     const tree = renderer.create(
       <Comments comments={comments}/>
     ).toJSON();

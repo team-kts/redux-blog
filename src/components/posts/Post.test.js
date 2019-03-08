@@ -9,6 +9,7 @@ describe('Post', () => {
       title: 'title',
       body: 'body'
     };
+    
     const tree = renderer.create(
       <Router>
         <Post post={post}/>

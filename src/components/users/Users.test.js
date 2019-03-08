@@ -10,6 +10,7 @@ describe('Posts', () => {
       username: 'username',
       email: 'email@email'
     }];
+    
     const tree = renderer.create(
       <Router>
         <Users users={users} />

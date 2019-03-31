@@ -44,7 +44,7 @@ function User({ user }) {
               <ListItem>
                 <ListItemAvatar>
                   <Avatar>
-                    <img  width='100px' src='https://res.cloudinary.com/khortsch/image/upload/v1553998296/person.png' />
+                    <img  width='60px' src='https://res.cloudinary.com/khortsch/image/upload/v1553998296/person.png' />
                   </Avatar>
                 </ListItemAvatar>
                 <Link to={`/users/${user.id}`} key={user.id} className={styles1.link}><ListItemText
